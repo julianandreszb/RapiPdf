@@ -92,7 +92,6 @@ export default async function createPdf(specUrl, options) {
     styles: pdfStyles,
   };
 
-
   pdfMake.fonts = {
     Roboto: {
       normal: 'Roboto-Regular.ttf',

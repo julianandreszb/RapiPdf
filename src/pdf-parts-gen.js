@@ -480,7 +480,6 @@ export function getApiDef(spec, filterPath, schemaStyle, localize, includeExampl
   return content;
 }
 
-
 // API List Def
 export function getApiListDef(spec, sectionHeading, localize) {
   const content = [{ text: sectionHeading, style: ['h3', 'b'], pageBreak: 'none' }];
