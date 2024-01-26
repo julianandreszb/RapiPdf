@@ -18,3 +18,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+docs/specs/restful-api-v1.json

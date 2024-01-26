@@ -190,11 +190,18 @@ function getExamplesDef(contentTypeObj, localizedExampleLabel) {
     ]);
   }
   if (contentTypeObj.examples) {
-    let iterCount = 0;
+    // let iterCount = 0;
     for (const oneExample in contentTypeObj.examples) {
       exampleSectionDef.push([
-        { text: `${localizedExampleLabel} ${++iterCount}:`, margin: [20, 10, 0, 0], style: ['small', 'b'] },
-        { text: JSON.stringify(oneExample, null, 2), margin: [40, 10, 0, 0], style: 'monoSub' },
+        // { text: `${localizedExampleLabel} ${++iterCount}:`, margin: [20, 10, 0, 0], style: ['small', 'b'] },
+        { text: `${oneExample}:`, margin: [20, 10, 0, 0], style: ['small', 'b'] },
+
+
+        // { text: JSON.stringify(oneExample, null, 2), margin: [40, 10, 0, 0], style: 'monoSub' },
+        // { text: JSON.stringify(contentTypeObj.examples[oneExample].value, null, 2), margin: [40, 10, 0, 0], style: 'monoSub' },
+        // { text: contentTypeObj.examples[oneExample].value, margin: [40, 10, 0, 0], style: 'monoSub' },
+        // { text: `<pre>${JSON.stringify(JSON.parse(contentTypeObj.examples[oneExample].value), null, 2)}</pre>`, margin: [40, 10, 0, 0], style: 'monoSub' },
+        { text: JSON.stringify(JSON.parse(contentTypeObj.examples[oneExample].value), null, '\u200B \u200B'), margin: [40, 10, 0, 0], style: 'monoSub' },
       ]);
     }
   }
